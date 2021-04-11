@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Weather</title>
+{% endblock %}
+
+{% block body %}
+<div style="background-color: aquamarine" class="content">
+    <h1 style="text-align: center">Weather</h1>
+    <h3 style="text-align: center">Current weather for: {{city }}</h3>
+    <h5 style="text-align: center">{{description}}</h5>
+    <h5 style="text-align: center">Temperature: {{temp}}C°</h5>
+    <h5 style="text-align: center">Humidity : {{humidity}}%</h5>
+    <h5 style="text-align: center">Wind: {{wind}}km/h</h5>
+    <div class="form">
+        <form action="/result" method="POST">
+            <button class="bottone">BACK</button>    
+        </form>
+    </div>
+   
+</div>
+{% endblock %}
